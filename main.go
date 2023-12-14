@@ -42,6 +42,7 @@ func main() {
 
 		select {
 		case <-timer.C:
+			fmt.Println("you appear to have run out of time!!!")
 			return
 		case answer := <-answerChannel:
 			if answer == p.a {
